@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
-    background-color: white;
-
+  background-color: white;
 }
 
 html {
@@ -218,16 +217,36 @@ p {
 
 .review_img {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
-  align-items: center;
 }
 
 .review_img img {
-  max-width: 35%;
-  padding: 10px;
+  max-width: 100%;
   box-sizing: border-box;
+  padding: 3px;
 }
+
+.image-container {
+  position: relative;
+
+}
+
+.hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.image-container:hover .hover-image {
+  opacity: 1;
+}
+
 
 footer{
   text-align: center;
